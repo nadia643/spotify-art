@@ -1,24 +1,31 @@
+window.onload = function() {
 
+let city = document.querySelector('.input-text');
+let button = document.querySelector('.button');
 let key = "cc849320a34e7e9d09e74100400ff710";
 
-fetch('http://api.openweathermap.org/data/2.5/weather?q=London&APPID=' + key)
+button.addEventListener('click', function() {
+
+fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city.value + '&appid=' + key)
 
 .then(res => {
     return res.json()
 })
 .then(data => {
     drawWeather(data);
-    console.log(data)
+    console.log(data);
 })
 .catch(err => {
-    return "error made"
+    alert("Please enter a valid city");
 })
-
+})
+}
 function drawWeather(d) {
     let temp = Math.round(parseFloat(d.main.temp)-273.15);
     let tempMin = Math.round(parseFloat(d.main.temp_min)-273.15);
     let tempMax = Math.round(parseFloat(d.main.temp_max)-273.15);
     let location = d.name;
+    let country = d.sys.country;
     let main = d.weather[0].main;
 
     //icon
@@ -28,7 +35,7 @@ function drawWeather(d) {
     img.src = iconUrl
     let description = d.weather[0].description;
     img.alt = description;
-    document.body.appendChild(img);
+    document.getElementById("icon").appendChild(img);
 
     // sunrise
     let unix_sunrise = d.sys.sunrise;
@@ -49,7 +56,7 @@ function drawWeather(d) {
     document.getElementById("temp").innerHTML += temp + '&deg';
     document.getElementById("temp-min").innerHTML += tempMin + '&deg;';
     document.getElementById("temp-max").innerHTML += tempMax + '&deg;';
-    document.getElementById("location").innerHTML += location;
+    document.getElementById("location").innerHTML += location + ', ' + country;
     document.getElementById("sunrise").innerHTML += sunrise;
     document.getElementById("sunset").innerHTML += sunset;
     document.getElementById("main").innerHTML += main;

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-  </head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
  
     <title>Document</title>
 </head>
@@ -16,17 +17,21 @@
 
     <div>
         <form>
-            City <input type="text" id="chosenCity">
-            <input type="button" value="submit"> 
-            <div class="container"> 
-                <p id="temp">Current temperature: </p>
-                <p id="temp-min">Min temp: </p>
-                <p id="temp-max">Max temp: </p>
-                <p id="location">Location: </p>
-                <p id="sunrise">Sunrise: </p>
-                <p id="sunset">Sunset: </p>
-                <p id="main"></p>
+            City <input type="text" class="input-text" id="chosenCity">
+            <input type="button" class="button" value="submit"> 
+            <div class="container" id="container"> 
+                <p class="item header-location" id="location"></p>
+                <p class="item" id="temp">Current temperature: </p>
+                <p class="item" id="temp-min">Min temp: </p>
+                <p class="item" id="temp-max">Max temp: </p>
+                <p class="item" id="sunrise">Sunrise: </p>
+                <p class="item" id="sunset">Sunset: </p>
+                <p class="item" id="main"></p>
             </div>
+            <div class="container-icon">
+            <div class="icon" id="icon"></div>
+        </div>
+
         </form>
     </div>
 

@@ -1,12 +1,34 @@
 .header-location {
   font-family: 'Roboto Mono', monospace;
-  font-size: 2rem; }
+  font-size: 1.6rem;
+  padding: .2rem;
+  margin: 0 auto; }
 
 body {
   height: 100vh;
   background: linear-gradient(to bottom right, #feffbe, #fff400); }
 
 .container {
+  position: absolute;
+  border-style: solid;
+  width: 25vw;
+  height: 45vh;
+  margin-left: 50vh;
+  margin-top: 15vh;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; }
+  justify-content: center; }
+
+.container-icon {
+  position: absolute;
+  border-style: solid opaque;
+  margin-left: 50vh;
+  margin-top: 15vh; }
+
+.item {
+  position: relative; }
+
+.icon {
+  height: 30%;
+  width: 30%; }
