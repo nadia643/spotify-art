@@ -1,0 +1,12 @@
+.header-location {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2rem; }
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #feffbe, #fff400); }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
