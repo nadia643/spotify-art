@@ -13,7 +13,12 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city.value + '&appi
 })
 .then(data => {
     drawWeather(data);
+    // button.addEventListener('click', function() {
+    // window.location.reload();
+
+    // })
     console.log(data);
+    
 })
 .catch(err => {
     alert("Please enter a valid city");
@@ -32,10 +37,11 @@ function drawWeather(d) {
     let iconCode = d.weather[0].icon;
     let img = document.createElement('img');
     let iconUrl = "http://openweathermap.org/img/wn/" + iconCode + ".png";
-    img.src = iconUrl
+    // img.src = iconUrl
     let description = d.weather[0].description;
     img.alt = description;
-    document.getElementById("icon").appendChild(img);
+    let icon = document.getElementById("icon");
+    icon.setAttribute('src', iconUrl)
 
     // sunrise
     let unix_sunrise = d.sys.sunrise;
@@ -53,11 +59,11 @@ function drawWeather(d) {
     let seconds1 = "0" + date1.getSeconds();
     let sunset = hours1 + ':' + minutes1.substr(-2) + ':' + seconds1.substr(-2);
 
-    document.getElementById("temp").innerHTML += temp + '&deg';
-    document.getElementById("temp-min").innerHTML += tempMin + '&deg;';
-    document.getElementById("temp-max").innerHTML += tempMax + '&deg;';
-    document.getElementById("location").innerHTML += location + ', ' + country;
-    document.getElementById("sunrise").innerHTML += sunrise;
-    document.getElementById("sunset").innerHTML += sunset;
-    document.getElementById("main").innerHTML += main;
+    document.getElementById("temp").innerHTML = temp + '&deg';
+    document.getElementById("temp-min").innerHTML = tempMin + '&deg;';
+    document.getElementById("temp-max").innerHTML = tempMax + '&deg;';
+    document.getElementById("location").innerHTML = location + ', ' + country;
+    document.getElementById("sunrise").innerHTML = sunrise;
+    document.getElementById("sunset").innerHTML = sunset;
+    document.getElementById("main").innerHTML = main;
 }

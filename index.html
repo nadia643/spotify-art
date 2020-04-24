@@ -16,23 +16,27 @@
 <body>
 
     <div>
-        <form>
-            City <input type="text" class="input-text" id="chosenCity">
-            <input type="button" class="button" value="submit"> 
+        <form> 
+            <label for="city">City</label>
+            <input type="text" class="input-text" id="chosenCity">
+            <input type="button" class="button" id="button" value="Get weather"> 
+        </form>
             <div class="container" id="container"> 
                 <p class="item header-location" id="location"></p>
-                <p class="item" id="temp">Current temperature: </p>
-                <p class="item" id="temp-min">Min temp: </p>
-                <p class="item" id="temp-max">Max temp: </p>
-                <p class="item" id="sunrise">Sunrise: </p>
-                <p class="item" id="sunset">Sunset: </p>
-                <p class="item" id="main"></p>
+                <p class="item">Current temperature: <span id="temp"></span></p>
+                <p class="item">Min temp: <span id="temp-min"></span></p>
+                <p class="item">Max temp: <span id="temp-max"></span></p>
+                <p class="item">Sunrise: <span id="sunrise"></span></p>
+                <p class="item">Sunset: <span id="sunset"></span></p>
+                <p class="item"><span id="main"></span></p>
+
             </div>
             <div class="container-icon">
-            <div class="icon" id="icon"></div>
+            <div class="icon"><img id="icon"></img></div>
+            
         </div>
 
-        </form>
+       
     </div>
 
 </body>
