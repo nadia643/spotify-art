@@ -1,5 +1,79 @@
-Need to make the background responsive
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+ 
+    <title>Document</title>
+</head>
 
-Design??
+    <script src="script.js"></script>
 
-When you input a place, to be able to input country name too
+
+<body>
+
+    <div>
+        <form> 
+            <label for="city">City</label>
+            <input type="text" class="input-text" id="chosenCity">
+            <input type="button" class="button" id="button" value="Get weather"> 
+        </form>
+            <div class="container" id="container"> 
+                <p class="item header-location" id="location"></p>
+                <p class="item">Current temperature: <span id="temp"></span></p>
+                <p class="item">Min temp: <span id="temp-min"></span></p>
+                <p class="item">Max temp: <span id="temp-max"></span></p>
+                <p class="item">Sunrise: <span id="sunrise"></span></p>
+                <p class="item">Sunset: <span id="sunset"></span></p>
+                <p class="item"><span id="main"></span></p>
+
+            </div>
+            <div class="container-icon">
+            <div class="icon"><img id="icon"></img></div>
+            
+        </div>
+
+       
+    </div>
+
+</body>
+</html>
+
+@import "typography";
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #feffbe, #fff400); 
+}
+
+.container {
+  position: absolute;
+  border-style: solid;
+  width: 25vw;
+  height: 45vh;
+  margin-left: 50vh;
+  margin-top: 15vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container-icon {
+  position: absolute;
+  border-style: solid opaque;
+  margin-left: 50vh;
+  margin-top: 15vh;
+}
+
+.item {
+  position: relative;
+}
+
+.icon {
+  height: 30%;
+  width: 30%;
+}

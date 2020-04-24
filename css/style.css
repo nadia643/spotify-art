@@ -1,34 +1,40 @@
 .header-location {
   font-family: 'Roboto Mono', monospace;
-  font-size: 1.6rem;
+  font-size: 3rem;
   padding: .2rem;
   margin: 0 auto; }
+
+.font-large {
+  font-size: 3rem; }
+
+.font-medium {
+  font-size: 2rem; }
+
+.font-small {
+  font-size: 1.5rem; }
 
 body {
   height: 100vh;
   background: linear-gradient(to bottom right, #feffbe, #fff400); }
 
 .container {
-  position: absolute;
-  border-style: solid;
-  width: 25vw;
-  height: 45vh;
-  margin-left: 50vh;
-  margin-top: 15vh;
-  padding: 1rem;
+  padding: 10px;
+  height: 800px;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
-
-.container-icon {
-  position: absolute;
-  border-style: solid opaque;
-  margin-left: 50vh;
-  margin-top: 15vh; }
+  align-items: center; }
 
 .item {
-  position: relative; }
+  padding: 30px;
+  margin: 5px;
+  color: black;
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold; }
 
-.icon {
-  height: 30%;
-  width: 30%; }
+.i1, .i2, .i3, .i4, .i5 {
+  width: auto; }
+
+.container-two, .container-three {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }

@@ -6,30 +6,30 @@ body {
 }
 
 .container {
-  position: absolute;
-  border-style: solid;
-  width: 25vw;
-  height: 45vh;
-  margin-left: 50vh;
-  margin-top: 15vh;
-  padding: 1rem;
+  padding: 10px;
+  height: 800px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
+  align-items: center;
 }
 
-.container-icon {
-  position: absolute;
-  border-style: solid opaque;
-  margin-left: 50vh;
-  margin-top: 15vh;
-}
 
 .item {
-  position: relative;
+  padding: 30px;
+  margin: 5px; 
+  color: black;
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
 }
 
-.icon {
-  height: 30%;
-  width: 30%;
+
+.i1, .i2, .i3, .i4, .i5 {
+  width: auto;
+}
+
+.container-two, .container-three {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

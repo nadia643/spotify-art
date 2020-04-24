@@ -66,4 +66,7 @@ function drawWeather(d) {
     document.getElementById("sunrise").innerHTML = sunrise;
     document.getElementById("sunset").innerHTML = sunset;
     document.getElementById("main").innerHTML = main;
+
 }
+
+

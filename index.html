@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Manrope&display=swap" rel="stylesheet"> 
 </head>
  
     <title>Document</title>
@@ -16,24 +17,32 @@
 <body>
 
     <div>
+        <div class="container" id="container"> 
         <form> 
-            <label for="city">City</label>
-            <input type="text" class="input-text" id="chosenCity">
+            <input value="" placeholder="Insert city name here" type="text" class="input-text" id="chosenCity">
             <input type="button" class="button" id="button" value="Get weather"> 
         </form>
-            <div class="container" id="container"> 
-                <p class="item header-location" id="location"></p>
-                <p class="item">Current temperature: <span id="temp"></span></p>
-                <p class="item">Min temp: <span id="temp-min"></span></p>
-                <p class="item">Max temp: <span id="temp-max"></span></p>
-                <p class="item">Sunrise: <span id="sunrise"></span></p>
-                <p class="item">Sunset: <span id="sunset"></span></p>
-                <p class="item"><span id="main"></span></p>
+                <div class="container-location">
+                    <p class="item i1 header-location" id="location"></p>
+                </div>
+                <div class="icon"><img id="icon"></img></div>
+                <div class="container-one">
+                    <p class="item i2 font-large"> <span id="temp"></span></p>
+                </div>
+                <div class="container-two">
+                    <p class="item i3 font-large"> <span id="temp-min"></span></p>
+                    <p class="item i4 font-large"> <span id="temp-max"></span></p>
+                </div>
+                <div class="container-three">
+                    <p class="item i5 font-medium"><span id="sunrise"></span></p>
+                    <p class="item i6 font-medium"><span id="sunset"></span></p>
+                </div>
+                <div class="container-four">
+                    <p class="item i7 font-medium"><span id="main"></span></p>
+                </div>
 
             </div>
-            <div class="container-icon">
-            <div class="icon"><img id="icon"></img></div>
-            
+
         </div>
 
        
